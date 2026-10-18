@@ -1,0 +1,90 @@
+{
+  "SB1001": {
+    "order_number": "SB1001",
+    "phone": "9876543210",
+    "customer_name": "Aarav Sharma",
+    "status": "In Transit",
+    "courier": "Bluedart",
+    "tracking_number": "BD84729103",
+    "tracking_url": "https://track.spoiledbunny.in/mock/SB1001",
+    "estimated_delivery": "Tomorrow by 8 PM",
+    "items": [
+      {
+        "title": "RISK PROTOCOL OVERSIZED TEE",
+        "size": "L",
+        "quantity": 1,
+        "price": 1549
+      }
+    ],
+    "timeline": [
+      { "status": "Order Placed", "time": "Oct 16, 2026 10:30 AM", "done": true },
+      { "status": "Packed & Dispatched", "time": "Oct 17, 2026 02:15 PM", "done": true },
+      { "status": "In Transit - Out for Delivery Soon", "time": "Oct 18, 2026 09:00 AM", "done": true },
+      { "status": "Delivered", "time": "Expected Tomorrow", "done": false }
+    ]
+  },
+  "SB1002": {
+    "order_number": "SB1002",
+    "phone": "9123456780",
+    "customer_name": "Rhea Sen",
+    "status": "Delivered",
+    "courier": "Delhivery",
+    "tracking_number": "DL78219034",
+    "tracking_url": "https://track.spoiledbunny.in/mock/SB1002",
+    "estimated_delivery": "Delivered on Oct 17, 2026",
+    "items": [
+      {
+        "title": "STONEFLOW PAJAMA PANTS",
+        "size": "32",
+        "quantity": 1,
+        "price": 1899
+      }
+    ],
+    "timeline": [
+      { "status": "Delivered", "time": "Oct 17, 2026 04:30 PM", "done": true }
+    ]
+  },
+  "SB1003": {
+    "order_number": "SB1003",
+    "phone": "9988776655",
+    "customer_name": "Kabir Malhotra",
+    "status": "Processing",
+    "courier": "Shiprocket",
+    "tracking_number": "SR10928374",
+    "tracking_url": "https://track.spoiledbunny.in/mock/SB1003",
+    "estimated_delivery": "Ships within 24 hours",
+    "items": [
+      {
+        "title": "CRIMSON RITUAL OVERSIZED TEE",
+        "size": "M",
+        "quantity": 1,
+        "price": 1549
+      }
+    ],
+    "timeline": [
+      { "status": "Order Placed", "time": "Oct 18, 2026 08:00 AM", "done": true },
+      { "status": "Processing & Verification", "time": "Oct 18, 2026 10:00 AM", "done": true }
+    ]
+  },
+  "SB1004": {
+    "order_number": "SB1004",
+    "phone": "9811223344",
+    "customer_name": "Simran Kaur",
+    "status": "Out for Delivery",
+    "courier": "Bluedart",
+    "tracking_number": "BD99281726",
+    "tracking_url": "https://track.spoiledbunny.in/mock/SB1004",
+    "estimated_delivery": "Today by 6 PM",
+    "items": [
+      {
+        "title": "LOW VOID BOXY WAFFLE TANK",
+        "size": "S",
+        "quantity": 1,
+        "price": 1299
+      }
+    ],
+    "timeline": [
+      { "status": "Out for Delivery", "time": "Oct 18, 2026 08:30 AM", "done": true }
+    ]
+  }
+}

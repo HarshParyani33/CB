@@ -1,0 +1,31 @@
+{
+  "shipping": {
+    "title": "Shipping & Delivery Policy",
+    "summary": "Free delivery across India on all orders. Standard delivery takes 3 to 7 business days depending on location.",
+    "international": "We currently do not offer international shipping (India only). For special requests, please contact our team on WhatsApp.",
+    "charges": "Zero shipping fee (Free delivery across India on all orders)."
+  },
+  "exchange": {
+    "title": "Exchange Policy",
+    "summary": "Size exchanges are accepted within 7 days of delivery, subject to product availability and a small reverse logistics handling fee. The item must be unworn, unwashed, and in its original packaging with tags intact.",
+    "process": "To initiate a size exchange within 7 days, reach out to our support team on WhatsApp (+91 63679 70069) with your order number."
+  },
+  "return_and_refund": {
+    "title": "Returns & Refund Policy",
+    "summary": "We do not offer cash refunds or returns for change of mind. All sales are final. We only replace or assist if you received a wrong or damaged item.",
+    "damaged_or_wrong_item": "If you received a defective, damaged, or incorrect product, we sincerely apologise. Please share your order number and unboxing video/photos on WhatsApp (+91 63679 70069) within 48 hours so we can resolve it immediately."
+  },
+  "restock": {
+    "title": "Restock Policy",
+    "summary": "Exclusive limited drops only. Once a piece or size sells out, it is gone forever. We do not restock sold-out items."
+  },
+  "cancellation": {
+    "title": "Order Cancellation",
+    "summary": "Orders cannot be cancelled or edited once placed. Please contact our support team on WhatsApp immediately if urgent assistance is needed."
+  },
+  "support": {
+    "whatsapp_number": "+91 63679 70069",
+    "whatsapp_link": "https://wa.me/916367970069",
+    "note": "Our team is available on WhatsApp for any issues outside standard automated assistance."
+  }
+}

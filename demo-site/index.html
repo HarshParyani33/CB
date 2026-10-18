@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SPOILED BUNNY | Official Streetwear Store &amp; Archive</title>
+  <meta name="description" content="Shop limited edition heavyweight streetwear, oversized tees, pajama pants, and boxy waffle tanks from SPOILED BUNNY. Free shipping across India.">
+  
+  <!-- Modern Streetwear Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-dark: #08090b;
+      --bg-card: #121316;
+      --bg-card-hover: #191a1e;
+      --border-color: #22242a;
+      --text-white: #f5f5f7;
+      --text-gray: #8a8d98;
+      --accent-red: #ff2b56;
+      --accent-glow: rgba(255, 43, 86, 0.4);
+      --font-heading: 'Space Grotesk', -apple-system, sans-serif;
+      --font-body: 'Outfit', -apple-system, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-white);
+      font-family: var(--font-body);
+      overflow-x: hidden;
+      line-height: 1.5;
+    }
+
+    /* Top Ticker Bar */
+    .announcement-bar {
+      background: #111215;
+      border-bottom: 1px solid var(--border-color);
+      padding: 9px 16px;
+      text-align: center;
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      color: var(--text-gray);
+      text-transform: uppercase;
+    }
+    .announcement-bar span {
+      color: var(--accent-red);
+      margin: 0 8px;
+    }
+
+    /* Header Nav */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(8, 9, 11, 0.88);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 36px;
+    }
+
+    .brand-logo {
+      font-family: var(--font-heading);
+      font-size: 21px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      color: #fff;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .brand-logo .dot {
+      color: var(--accent-red);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--text-gray);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      transition: color 0.15s;
+    }
+    .nav-links a:hover, .nav-links a.active {
+      color: #fff;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .cart-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 9999px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+    }
+    .cart-btn:hover {
+      border-color: var(--accent-red);
+      box-shadow: 0 0 15px var(--accent-glow);
+    }
+    .cart-count {
+      background: var(--accent-red);
+      color: #fff;
+      font-size: 11px;
+      padding: 1px 7px;
+      border-radius: 9999px;
+      font-weight: 800;
+    }
+
+    /* Hero Banner */
+    .hero {
+      position: relative;
+      padding: 70px 36px 50px;
+      max-width: 1300px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(255, 43, 86, 0.12);
+      border: 1px solid rgba(255, 43, 86, 0.35);
+      color: var(--accent-red);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+    .hero-title {
+      font-family: var(--font-heading);
+      font-size: clamp(34px, 6vw, 68px);
+      font-weight: 800;
+      letter-spacing: -1px;
+      line-height: 1.05;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+      background: linear-gradient(180deg, #ffffff 40%, #888d9a 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-desc {
+      color: var(--text-gray);
+      font-size: 15px;
+      max-width: 600px;
+      margin: 0 auto 30px;
+      font-weight: 400;
+    }
+
+    /* Filter Controls */
+    .filter-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+    .filter-tab {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-gray);
+      padding: 8px 18px;
+      border-radius: 9999px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      text-transform: uppercase;
+      transition: all 0.2s;
+    }
+    .filter-tab:hover, .filter-tab.active {
+      color: #fff;
+      border-color: #fff;
+      background: #202228;
+    }
+
+    /* Products Grid */
+    .products-container {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 36px 80px;
+    }
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 28px;
+    }
+
+    /* Individual Store Card */
+    .store-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 14px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: transform 0.25s, border-color 0.25s;
+    }
+    .store-card:hover {
+      transform: translateY(-4px);
+      border-color: #3b3f4c;
+    }
+    .store-card-img-wrap {
+      width: 100%;
+      height: 330px;
+      background: #0f1013;
+      position: relative;
+      overflow: hidden;
+    }
+    .store-card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .store-card:hover .store-card-img {
+      transform: scale(1.05);
+    }
+    .store-card-badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: var(--accent-red);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+      padding: 4px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }
+    .store-card-soldout {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(0, 0, 0, 0.85);
+      border: 1px solid #ef4444;
+      color: #ef4444;
+      font-size: 10px;
+      font-weight: 800;
+      padding: 4px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }
+
+    .store-card-content {
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .store-card-type {
+      font-size: 10.5px;
+      color: var(--accent-red);
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .store-card-title {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      line-height: 1.35;
+      margin-bottom: 8px;
+      min-height: 36px;
+    }
+    .store-card-price-row {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+    .store-card-price {
+      font-size: 17px;
+      font-weight: 800;
+      color: #fff;
+    }
+    .store-card-compare {
+      font-size: 12.5px;
+      color: var(--text-gray);
+      text-decoration: line-through;
+    }
+
+    .store-card-actions {
+      margin-top: auto;
+      display: flex;
+      gap: 8px;
+    }
+    .btn-buy {
+      flex: 1;
+      background: #fff;
+      color: #000;
+      border: none;
+      padding: 10px 0;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-buy:hover {
+      background: #e5e7eb;
+      box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+    }
+    .btn-buy.added {
+      background: #10b981;
+      color: #fff;
+    }
+    .btn-soldout {
+      flex: 1;
+      background: #1a1c22;
+      color: #6b7280;
+      border: 1px solid var(--border-color);
+      padding: 10px 0;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: not-allowed;
+      text-align: center;
+    }
+
+    /* Cart Drawer Slide-out */
+    .cart-drawer-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.65);
+      backdrop-filter: blur(4px);
+      z-index: 200;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s;
+    }
+    .cart-drawer-overlay.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .cart-drawer {
+      position: fixed;
+      top: 0;
+      right: -420px;
+      width: 400px;
+      max-width: 100vw;
+      height: 100%;
+      background: #0f1013;
+      border-left: 1px solid var(--border-color);
+      z-index: 201;
+      display: flex;
+      flex-direction: column;
+      transition: right 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .cart-drawer.open {
+      right: 0;
+    }
+    .cart-header {
+      padding: 20px;
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .cart-items {
+      flex: 1;
+      overflow-y: auto;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .cart-item {
+      display: flex;
+      gap: 14px;
+      background: #14161a;
+      border: 1px solid var(--border-color);
+      padding: 12px;
+      border-radius: 10px;
+    }
+    .cart-item-img {
+      width: 60px;
+      height: 75px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+    .cart-footer {
+      padding: 20px;
+      border-top: 1px solid var(--border-color);
+      background: #111215;
+    }
+    .checkout-btn {
+      width: 100%;
+      background: var(--accent-red);
+      color: #fff;
+      border: none;
+      padding: 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+      cursor: pointer;
+      text-transform: uppercase;
+      box-shadow: 0 6px 20px var(--accent-glow);
+    }
+
+    /* Toast Notification */
+    .cart-toast {
+      position: fixed;
+      top: 80px;
+      right: 36px;
+      background: #18191f;
+      border: 1px solid var(--border-color);
+      border-left: 4px solid var(--accent-red);
+      color: #fff;
+      padding: 12px 18px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      z-index: 150;
+      transform: translateY(-20px);
+      opacity: 0;
+      transition: all 0.25s;
+    }
+    .cart-toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border-color);
+      padding: 40px 36px;
+      max-width: 1300px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      color: var(--text-gray);
+      font-size: 13px;
+      text-align: center;
+    }
+    footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header {
+        padding: 14px 20px;
+      }
+      .nav-links {
+        display: none;
+      }
+      .hero {
+        padding: 40px 20px 30px;
+      }
+      .products-container {
+        padding: 0 20px 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Announcement -->
+  <div class="announcement-bar">
+    FREE SHIPPING ACROSS INDIA <span>•</span> 15% OFF ON ALL PREPAID ORDERS <span>•</span> NO RESTOCKS ONCE SOLD OUT
+  </div>
+
+  <!-- Header -->
+  <header>
+    <a href="/" class="brand-logo">
+      SPOILED BUNNY<span class="dot">.</span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#" class="active" onclick="filterCategory('All')">All Drops</a></li>
+      <li><a href="#" onclick="filterCategory('T-Shirt')">Oversized Tees</a></li>
+      <li><a href="#" onclick="filterCategory('Pants')">Pajama Pants</a></li>
+      <li><a href="#" onclick="filterCategory('Tank Top')">Waffle Tanks</a></li>
+      <li><a href="#" onclick="filterCategory('Shirt')">Boxy Shirts</a></li>
+    </ul>
+
+    <div class="header-actions">
+      <button type="button" class="cart-btn" onclick="toggleCartDrawer()">
+        <span>CART</span>
+        <span class="cart-count" id="cart-counter">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-badge">VOL. 04 // LIMITED ARCHIVE</div>
+    <h1 class="hero-title">DISTORTED REALITY</h1>
+    <p class="hero-desc">
+      Heavyweight cotton, oversized silhouettes, and signature wash treatments. Limited quantities. Never restocked.
+    </p>
+
+    <!-- Filters -->
+    <div class="filter-tabs">
+      <button class="filter-tab active" onclick="filterCategory('All', this)">All</button>
+      <button class="filter-tab" onclick="filterCategory('T-Shirt', this)">Oversized Tees</button>
+      <button class="filter-tab" onclick="filterCategory('Pants', this)">Pants</button>
+      <button class="filter-tab" onclick="filterCategory('Tank Top', this)">Tanks</button>
+      <button class="filter-tab" onclick="filterCategory('Shirt', this)">Shirts</button>
+    </div>
+  </section>
+
+  <!-- Product Grid -->
+  <main class="products-container">
+    <div class="products-grid" id="products-grid">
+      <!-- Populated via script -->
+      <div style="grid-column: 1/-1; text-align: center; color: var(--text-gray); padding: 40px;">
+        Loading catalog...
+      </div>
+    </div>
+  </main>
+
+  <!-- Toast Notification -->
+  <div id="cart-toast" class="cart-toast">Added to cart!</div>
+
+  <!-- Cart Drawer -->
+  <div class="cart-drawer-overlay" id="cart-overlay" onclick="toggleCartDrawer()"></div>
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <h3 style="font-size: 16px; font-weight: 800; letter-spacing: 0.5px;">SHOPPING BAG</h3>
+      <button onclick="toggleCartDrawer()" style="background: none; border: none; color: #fff; font-size: 18px; cursor: pointer;">✕</button>
+    </div>
+    <div class="cart-items" id="cart-items">
+      <div style="text-align: center; color: var(--text-gray); margin-top: 40px; font-size: 13.5px;">
+        Your bag is currently empty.
+      </div>
+    </div>
+    <div class="cart-footer">
+      <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 13px; color: var(--text-gray);">
+        <span>Subtotal</span>
+        <span id="cart-subtotal" style="color: #fff; font-weight: 700;">₹0</span>
+      </div>
+      <div style="display: flex; justify-content: space-between; margin-bottom: 14px; font-size: 12px; color: var(--accent-red);">
+        <span>Prepaid Discount (15%)</span>
+        <span id="cart-discount">- ₹0</span>
+      </div>
+      <div style="display: flex; justify-content: space-between; margin-bottom: 18px; font-size: 15px; font-weight: 800; color: #fff;">
+        <span>Final Total</span>
+        <span id="cart-total">₹0</span>
+      </div>
+      <button class="checkout-btn" onclick="alert('Demo: Checkout flow ready! Live orders use Razorpay or Shopify Checkout.')">
+        CHECKOUT NOW
+      </button>
+    </div>
+  </aside>
+
+  <!-- Footer -->
+  <footer>
+    <div class="brand-logo" style="font-size: 18px;">SPOILED BUNNY.</div>
+    <p>Streetwear designed in India. 100% Free Shipping. Exchanges allowed within 7 days.</p>
+    <p>Customer Support: <a href="https://wa.me/916367970069" target="_blank">+91 63679 70069 (WhatsApp)</a></p>
+  </footer>
+
+  <!-- Store Logic & Cart State Management -->
+  <script>
+    let allProducts = [];
+    let cart = [];
+
+    async function loadProducts() {
+      try {
+        const res = await fetch('/api/catalog');
+        if (res.ok) {
+          allProducts = await res.json();
+        } else {
+          throw new Error('API failed');
+        }
+      } catch (e) {
+        console.warn('Could not fetch from /api/catalog, using fallback sample items.');
+        allProducts = [
+          {
+            id: "10354237112385",
+            title: "CRIMSON RITUAL OVERSIZED TEE",
+            productType: "T-Shirt",
+            price: 1549,
+            compareAtPrice: 1999,
+            images: ["https://cdn.shopify.com/s/files/1/0713/4589/7537/files/LayeredGrungeStreetwearBackPortrait.png"],
+            available: true
+          },
+          {
+            id: "10324103823425",
+            title: "RISK PROTOCOL OVERSIZED TEE",
+            productType: "T-Shirt",
+            price: 1549,
+            compareAtPrice: null,
+            images: ["https://cdn.shopify.com/s/files/1/0713/4589/7537/files/MoodyGraphicTeeStudioPortrait.png"],
+            available: true
+          },
+          {
+            id: "7901504012353",
+            title: "LOW VOID BOXY WAFFLE TANK",
+            productType: "Tank Top",
+            price: 899,
+            compareAtPrice: 1299,
+            images: [],
+            available: true
+          },
+          {
+            id: "8080877748289",
+            title: "STONEFLOW PAJAMA PANTS",
+            productType: "Pants",
+            price: 1899,
+            compareAtPrice: null,
+            images: [],
+            available: true
+          }
+        ];
+      }
+      renderProducts(allProducts);
+    }
+
+    function renderProducts(products) {
+      const grid = document.getElementById('products-grid');
+      if (!products || products.length === 0) {
+        grid.innerHTML = '<div style="grid-column: 1/-1; text-align: center; color: var(--text-gray); padding: 40px;">No products found in this category.</div>';
+        return;
+      }
+
+      grid.innerHTML = products.map(p => {
+        const imgUrl = (p.images && p.images.length > 0) ? p.images[0] : '';
+        const hasDiscount = p.compareAtPrice && p.compareAtPrice > p.price;
+        const discountBadge = hasDiscount
+          ? Math.round(((p.compareAtPrice - p.price) / p.compareAtPrice) * 100) + '% OFF'
+          : null;
+
+        return `
+          <div class="store-card">
+            <div class="store-card-img-wrap">
+              ${imgUrl ? `<img src="${imgUrl}" alt="${p.title}" class="store-card-img" loading="lazy" onError="this.style.display='none'">` : '<div style="display:flex;align-items:center;justify-content:center;height:100%;color:#4b5563;font-size:12px;">SPOILED BUNNY</div>'}
+              ${discountBadge && p.available ? `<span class="store-card-badge">${discountBadge}</span>` : ''}
+              ${!p.available ? '<span class="store-card-soldout">Sold out</span>' : ''}
+            </div>
+            <div class="store-card-content">
+              <div class="store-card-type">${p.productType || 'Streetwear'}</div>
+              <h3 class="store-card-title">${p.title}</h3>
+              <div class="store-card-price-row">
+                <span class="store-card-price">₹${p.price}</span>
+                ${p.compareAtPrice ? `<span class="store-card-compare">₹${p.compareAtPrice}</span>` : ''}
+              </div>
+              <div class="store-card-actions">
+                ${p.available ? `
+                  <button type="button" class="btn-buy" onclick="addToCartById('${p.id}', this)">
+                    ADD TO BAG
+                  </button>
+                ` : `
+                  <button type="button" class="btn-soldout" disabled>
+                    SOLD OUT
+                  </button>
+                `}
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function filterCategory(cat, btn) {
+      if (btn) {
+        document.querySelectorAll('.filter-tab').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      }
+
+      if (cat === 'All') {
+        renderProducts(allProducts);
+      } else {
+        const filtered = allProducts.filter(p =>
+          (p.productType || '').toLowerCase().includes(cat.toLowerCase()) ||
+          p.title.toLowerCase().includes(cat.toLowerCase())
+        );
+        renderProducts(filtered);
+      }
+    }
+
+    function addToCart(product) {
+      cart.push(product);
+      updateCartUI();
+      showToast(`Added "${product.title}" to your bag!`);
+    }
+
+    function addToCartById(id, btn) {
+      const product = allProducts.find(p => String(p.id) === String(id));
+      if (!product) return;
+      addToCart(product);
+
+      if (btn) {
+        const orig = btn.innerText;
+        btn.innerText = 'ADDED ✓';
+        btn.classList.add('added');
+        setTimeout(() => {
+          btn.innerText = orig;
+          btn.classList.remove('added');
+        }, 1500);
+      }
+    }
+
+    function updateCartUI() {
+      document.getElementById('cart-counter').innerText = cart.length;
+
+      const itemsEl = document.getElementById('cart-items');
+      if (cart.length === 0) {
+        itemsEl.innerHTML = '<div style="text-align: center; color: var(--text-gray); margin-top: 40px; font-size: 13.5px;">Your bag is currently empty.</div>';
+        document.getElementById('cart-subtotal').innerText = '₹0';
+        document.getElementById('cart-discount').innerText = '- ₹0';
+        document.getElementById('cart-total').innerText = '₹0';
+        return;
+      }
+
+      itemsEl.innerHTML = cart.map((item, idx) => `
+        <div class="cart-item">
+          ${item.image || (item.images && item.images[0]) ? `<img src="${item.image || item.images[0]}" class="cart-item-img">` : '<div style="width:60px;height:75px;background:#222;border-radius:6px;"></div>'}
+          <div style="flex: 1; display:flex; flex-direction:column; justify-content:center;">
+            <div style="font-size: 12px; font-weight: 700; color: #fff; margin-bottom: 4px; line-height: 1.3;">${item.title}</div>
+            <div style="font-size: 13px; font-weight: 800; color: var(--accent-red);">₹${item.price}</div>
+          </div>
+          <button onclick="removeFromCart(${idx})" style="background:none; border:none; color: var(--text-gray); cursor:pointer; font-size:16px;">✕</button>
+        </div>
+      `).join('');
+
+      const subtotal = cart.reduce((acc, item) => acc + (parseFloat(item.price) || 0), 0);
+      const discount = Math.round(subtotal * 0.15); // 15% prepaid discount
+      const total = subtotal - discount;
+
+      document.getElementById('cart-subtotal').innerText = `₹${subtotal}`;
+      document.getElementById('cart-discount').innerText = `- ₹${discount}`;
+      document.getElementById('cart-total').innerText = `₹${total}`;
+    }
+
+    function removeFromCart(index) {
+      cart.splice(index, 1);
+      updateCartUI();
+    }
+
+    function toggleCartDrawer() {
+      document.getElementById('cart-drawer').classList.toggle('open');
+      document.getElementById('cart-overlay').classList.toggle('open');
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('cart-toast');
+      toast.innerText = msg;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 2500);
+    }
+
+    // Connect Chat Widget Events
+    window.addEventListener('bunny:add-to-cart', (e) => {
+      console.log('[Storefront] Received add-to-cart event from widget:', e.detail);
+      addToCart(e.detail);
+    });
+
+    window.BUNNY_ON_ADD_TO_CART = (product) => {
+      console.log('[Storefront] Callback triggered from widget:', product);
+    };
+
+    // Load catalog on page load
+    loadProducts();
+  </script>
+
+  <!-- Embed Bunny Assistant Widget from local build -->
+  <script src="/dist/bunny-widget.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "active_offers": [
+    {
+      "code": "PREPAID15",
+      "title": "15% Off on Prepaid Orders",
+      "discount": "15% off",
+      "description": "Instant 15% discount automatically applied when paying via prepaid methods (UPI, Cards, Net Banking).",
+      "type": "prepaid",
+      "valid": true
+    },
+    {
+      "code": "FREESHIP",
+      "title": "Free Delivery Across India",
+      "discount": "Free Shipping",
+      "description": "Complimentary standard delivery across all pin codes in India on all orders.",
+      "type": "shipping",
+      "valid": true
+    }
+  ],
+  "no_restock_note": "All drops are strictly limited editions. Once sold out, items are never restocked.",
+  "max_allowed_discount": "15% prepaid discount only. The brand does not offer any 90% or custom discounts."
+}

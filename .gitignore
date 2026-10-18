@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+widget/node_modules/
+
+# Environment variables & secrets (NEVER COMMIT)
+.env
+.env.*
+!.env.example
+
+# Logs
+logs/
+*.log
+
+# OS & Temp Files
+.DS_Store
+Thumbs.db
+
+# Agent & internal workspace metadata
+.agents/
+.gravitas/
+.opencode/
+opencode.json
+AGENTS.md
+
+# Editor & IDE configs
+.idea/
+.vscode/
