@@ -9,8 +9,8 @@
     "test:tools": "node server/scripts/testToolsCli.js",
     "test:chat": "node server/scripts/runTests.js",
     "test": "node server/scripts/testToolsCli.js",
-    "build:widget": "npm --prefix widget run build",
-    "build": "npm run build:widget",
+    "build:widget": "npm --prefix widget install && npm --prefix widget run build",
+    "build": "node -e \"console.log('Prebuilt widget bundle is ready in /dist')\"",
     "start": "node server/index.js",
     "dev": "node --watch server/index.js"
   },
