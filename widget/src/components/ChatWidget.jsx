@@ -1,7 +1,34 @@
 import React, { useState, useEffect, useRef } from 'react';
 import ProductCarousel from './ProductCarousel.jsx';
 
-const DEFAULT_API_URL = 'http://localhost:3001/api/chat';
+function resolveApiUrl() {
+  if (typeof window !== 'undefined' && window.BUNNY_API_URL) {
+    return window.BUNNY_API_URL;
+  }
+  if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+    const script = document.currentScript || document.querySelector('script[src*="bunny-widget"]');
+    if (script) {
+      const dataApi = script.getAttribute('data-api-url');
+      if (dataApi) {
+        return dataApi.endsWith('/api/chat') ? dataApi : `${dataApi.replace(/\/$/, '')}/api/chat`;
+      }
+      try {
+        if (script.src && script.src.startsWith('http')) {
+          const origin = new URL(script.src).origin;
+          if (origin.includes('localhost:5173') || origin.includes('127.0.0.1:5173')) {
+            return 'http://localhost:3001/api/chat';
+          }
+          return `${origin}/api/chat`;
+        }
+      } catch (e) {}
+    }
+    if (window.location && window.location.port === '5173') {
+      return 'http://localhost:3001/api/chat';
+    }
+  }
+  return '/api/chat';
+}
+
 const WHATSAPP_URL = 'https://wa.me/916367970069';
 
 const PRESET_STARTER_CHIPS = [
@@ -274,7 +301,7 @@ export default function ChatWidget() {
       .slice(0, -1)
       .map((m) => ({ role: m.role, content: m.content }));
 
-    const apiUrl = window.BUNNY_API_URL || DEFAULT_API_URL;
+    const apiUrl = resolveApiUrl();
 
     try {
       const response = await fetch(apiUrl, {
